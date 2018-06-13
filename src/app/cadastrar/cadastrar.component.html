@@ -1,0 +1,119 @@
+<section id="pageCadastro">
+    
+  <div class="container conteudo ">
+      <h1>Cadastros</h1>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#cadastrarPessoa" aria-controls="cadastrarEventos" role="tab" data-toggle="tab">Pessoas</a></li>
+        <li role="presentation"><a href="#cadastrarEventos" aria-controls="cadastrarEventos" role="tab" data-toggle="tab">Eventos</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+        
+      </ul>
+
+      <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="cadastrarPessoa">
+              <div class=" ">
+                  <form class="form-horizontal">
+                    <div class="form-group">
+                      <label for="nome" class="col-sm-2 control-label">Nome Completo</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="nome" placeholder="Nome da Pessoa">
+                      </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="nomeMae" class="col-sm-2 control-label">Nome da Mãe</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="nomeMae" placeholder="Nome da Mãe">
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="nomePai" class="col-sm-2 control-label">Nome do Pai</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="nomePai" placeholder="Nome do Pai">
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="endereco" class="col-sm-2 control-label">Endereço</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="nroCasa" class="col-sm-2 control-label">Numero da Casa</label>
+                        <div class="col-sm-2">
+                          <input type="number" class="form-control" id="nroCasa">
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="nroCasa" class="col-sm-2 control-label">Bairro</label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="nroCasa">
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="dataNascimento" class="col-sm-2 control-label">Data dataNascimento</label>
+                        <div class="col-sm-3">
+                          <input type="date" class="form-control" id="dataNascimento">
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="batizado"> Batizado
+                          </label>
+                          <label>
+                              <input type="checkbox" value="eucaristia"> Eucaristia
+                            </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Salvar</button>
+                        <button type="clear" class="btn btn-default">Limpar</button>
+                      </div>
+                    </div>
+                  </form>
+        
+                  
+                </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="cadastrarEventos">
+              <form class="form-horizontal">
+                  <div class="form-group">
+                    <label for="nomeEvento" class="col-sm-2 control-label">Nome do Evento</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="nomeEvento" placeholder="Nome do Evento">
+                    </div>
+                  </div>
+      
+                 
+                  <div class="form-group">
+                      <label for="dataEvento" class="col-sm-2 control-label">Data do Evento</label>
+                      <div class="col-sm-3">
+                        <input type="date" class="form-control" id="dataEvento">
+                      </div>
+                  </div>          
+                
+
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Salvar</button>
+                      <button type="clear" class="btn btn-default">Limpar</button>
+                    </div>
+                  </div>
+                </form>
+          </div>          
+        </div>
+
+  </div>
+
+</section>

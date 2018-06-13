@@ -1,0 +1,54 @@
+html, body, .capa{
+	height: 100%;
+}
+
+body{
+	
+	margin: 0px;	
+	background: url('../imagens/fundo.jpg');				
+	background-attachment: fixed;
+	font-family: Helvetica,Arial,sans-serif;
+	overflow-x: hidden;
+}
+
+.conteudo{
+	padding: 30px;
+	margin-top: 0px;
+	background: white;
+	
+}
+
+.comunidade{
+	text-align: center;
+}
+
+section{
+	margin-top: 5px; 
+}
+
+
+footer{
+	background: #f8f8f8;
+	opacity: 0.8;
+	padding: 50px 0px 20px 0px; 
+	position: relative;
+	margin-top: 10px;
+}
+
+.item-rede-social{
+	float: left;
+}
+
+#rodape h4{
+	color: #919496;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+#inicioPage{
+	margin-top: 50px;
+}
+
+
+
+
