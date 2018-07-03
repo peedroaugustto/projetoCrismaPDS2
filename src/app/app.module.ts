@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import {ROUTES} from './app.routes'
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -13,7 +14,8 @@ import { SntritaComponent } from './sntrita/sntrita.component';
 import { SjoComponent } from './sjo/sjo.component';
 import { ParoquiaComponent } from './paroquia/paroquia.component';
 import { EventosComponent } from './eventos/eventos.component';
-import { CadastrarComponent } from './cadastrar/cadastrar.component'
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { LoginComponent } from './login/login.component'
 
 
 @NgModule({
@@ -27,12 +29,13 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component'
     SjoComponent,
     ParoquiaComponent,
     EventosComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]

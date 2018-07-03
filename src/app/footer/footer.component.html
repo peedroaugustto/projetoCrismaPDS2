@@ -10,19 +10,19 @@
         <div class="col-md-2">
           <h4>Menu</h4>
           <ul class="nav">
-            <li><a href="#inicioPage">Inicio</a></li>
-            <li><a href="#sobreParoquia">Paroquia</a></li>
-            <li><a href="#sobreEventos">Eventos</a></li>                
+            <li><a s>Inicio</a></li>
+            <li><a [routerLink]="['']">Paroquia</a></li>
+            <li><a [routerLink]="['/eventos']">Eventos</a></li>                
           </ul>
         </div>
 
         <div class="col-md-2">
           <h4>Comunidades</h4>
           <ul class="nav">
-            <li><a href="#sobreMJP">Menino Jesus de Praga</a></li>
-            <li><a href="#sobreRITA">Santa Rita de Cássia </a></li>
-            <li><a href="#sobreSJO">São José Operário</a></li>   
-            <li><a href="#sobreMATRIZ">Matriz</a></li>               
+            <li><a [routerLink]="['/meninojesus']">Menino Jesus de Praga</a></li>
+            <li><a [routerLink]="['/santarita']">Santa Rita de Cássia </a></li>
+            <li><a [routerLink]="['/saojose']">São José Operário</a></li>   
+            <li><a [routerLink]="['/matriz']">Matriz</a></li>               
           </ul>
         </div>
 
