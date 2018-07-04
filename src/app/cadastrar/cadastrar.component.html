@@ -12,60 +12,44 @@
 
       <div class="tab-content">
           <div role="tabpanel" class="tab-pane fade in active" id="cadastrarPessoa">
-              <div class=" ">
+              <div class=" cadastro">
                 {{form.value | json}}
                   <form class="form-horizontal" novalidate #form="ngForm">
-                    <div class="form-group" [class.has-success]="iptnomePessoa.valid && (iptnomePessoa.dirty || iptnomePessoa.touched)"
-                    [class.has-error]="!iptnomePessoa.valid && (iptnomePessoa.dirty || iptnomePessoa.touched)">
-                      <label for="nome" class="col-sm-2 control-label">Nome Completo</label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control" name="nomePessoa"  id="nome" placeholder="Nome da Pessoa" #iptnomePessoa="ngModel" required ngModel>
-                        <span class="help-block" *ngIf="iptnomePessoa.valid && (iptnomePessoa.dirty || iptnomePessoa.touched)"><i class="fa fa-check"></i>Ok</span>
-                        <span class="help-block" *ngIf="!iptnomePessoa.valid && (iptnomePessoa.dirty || iptnomePessoa.touched)"><i class="fa fa-remove"></i>Campo Obrigatorio</span>
-                      </div>
-                    </div>
+                  
+                    <mt-inputs-container forIdentificacao="nomePessoa" mensagemErro="Campo Obrigatório" label="Nome Completo">
+                      <input autocomplete="off" type="text" class="form-control" name="nomePessoa"  id="nome" placeholder="Nome da Pessoa" required ngModel>
+ 
+                    </mt-inputs-container>
+
+                    <mt-inputs-container mensagemErro="Nome da Mãe é Obrigatório" label="Nome da Mãe">
+                        <input type="text" class="form-control" name="nomeMae" id="nomeMae" placeholder="Nome da Mãe" required ngModel>
+                    </mt-inputs-container>
+
+                    <mt-inputs-container mensagemErro="Nome do Pai é Obrigatório" label="Nome do Pai">
+                        <input type="text" class="form-control" name="nomePai" id="nomePai" placeholder="Nome do Pai" required ngModel>
+                    </mt-inputs-container>
+    
+                    <mt-inputs-container mensagemErro="Endereço é Obrigatório" label="Endereço">
+                        <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Endereço" required ngModel>
+                    </mt-inputs-container>
+                    
+
+                    <mt-inputs-container mensagemErro="Nro da casa é Obrigatório" label="Numero">
+                        <input type="number" class="form-control" name="nroCasa" id="nroCasa" required ngModel>
+                    </mt-inputs-container>
         
-                    <div class="form-group">
-                        <label for="nomeMae" class="col-sm-2 control-label">Nome da Mãe</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" name="nomeMae" id="nomeMae" placeholder="Nome da Mãe" required ngModel>
-                        </div>
-                    </div>
+
+                    <mt-inputs-container mensagemErro="Bairro é Obrigatório" label="Bairro">
+                        <input type="text" class="form-control" name="bairro" id="bairro" required ngModel>
+                    </mt-inputs-container>
         
-                    <div class="form-group">
-                        <label for="nomePai" class="col-sm-2 control-label">Nome do Pai</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" name="nomePai" id="nomePai" placeholder="Nome do Pai" required ngModel>
-                        </div>
-                    </div>
-        
-                    <div class="form-group">
-                        <label for="endereco" class="col-sm-2 control-label">Endereço</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Endereço" required ngModel>
-                        </div>
-                    </div>
-        
-                    <div class="form-group">
-                        <label for="nroCasa" class="col-sm-2 control-label">Numero da Casa</label>
-                        <div class="col-sm-2">
-                          <input type="number" class="form-control" name="nroCasa" id="nroCasa" required ngModel>
-                        </div>
-                    </div>
-        
-                    <div class="form-group">
-                        <label for="bairro" class="col-sm-2 control-label">Bairro</label>
-                        <div class="col-sm-3">
-                          <input type="text" class="form-control" name="bairro" id="bairro" required ngModel>
-                        </div>
-                    </div>
-        
-                    <div class="form-group">
-                        <label for="dataNascimento" class="col-sm-2 control-label">Data dataNascimento</label>
-                        <div class="col-sm-3">
-                          <input type="date" class="form-control" name="dataNascimento" id="dataNascimento" required ngModel>
-                        </div>
-                    </div>
+               
+                    
+
+                    <mt-inputs-container mensagemErro="Data de Nascimento é Obrigatório" label="Nascimento">
+                        <input type="date" class="form-control" name="dataNascimento" id="dataNascimento" required ngModel>
+                    </mt-inputs-container>
+              
             
                     <div class="form-group">
                       <div class="col-sm-offset-2 col-sm-10">
@@ -114,7 +98,7 @@
                 </div>
           </div>
           <div role="tabpanel" class="tab-pane fade" id="cadastrarEventos">
-              <form class="form-horizontal">
+              <form class="form-horizontal eventos">
                   <div class="form-group">
                     <label for="nomeEvento" class="col-sm-2 control-label">Nome do Evento</label>
                     <div class="col-sm-10">
@@ -148,21 +132,52 @@
           </div>     
           
           <div role="tabpanel" class="tab-pane fade" id="buscar">
-            <form class="form-horizontal">
-                <div class="form-group">
-                  <label for="nomeEvento" class="col-sm-2 control-label">Nome</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nomeEvento" placeholder="Nome">
-                  </div>
-                </div>        
-              
+              <div class="row">  
+                <div  class="col-lg-6 buscar">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Procurar por...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Buscar</button>
+                      </span>
+                    </div><!-- /input-group -->
+                  </div><!-- /.col--6 -->
+                </div><!-- /.row -->
+               <div class="panel panel-default">
+                 <!-- Default panel contents -->
+                 <div class="panel-heading">Panel heading</div>
 
-                <div class="form-group">
-                  <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-default">Buscar</button>                    
-                  </div>
-                </div>
-            </form>
+                  <!-- Table -->
+                  <table class="table">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Nome</th>
+                          <th>Comunidade</th>
+                          <th>Email</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>John</td>
+                          <td>Doe</td>
+                          <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Mary</td>
+                          <td>Moe</td>
+                          <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>July</td>
+                          <td>Dooley</td>
+                          <td>july@example.com</td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
           </div> 
       </div>
 

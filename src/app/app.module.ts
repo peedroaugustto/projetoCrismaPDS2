@@ -17,6 +17,7 @@ import { ParoquiaComponent } from './paroquia/paroquia.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LoginComponent } from './login/login.component';
+import { InputsComponent } from './share/inputs/inputs.component';
 
 
 
@@ -32,7 +33,8 @@ import { LoginComponent } from './login/login.component';
     ParoquiaComponent,
     EventosComponent,
     CadastrarComponent,
-    LoginComponent
+    LoginComponent,
+    InputsComponent
     
   ],
   imports: [
